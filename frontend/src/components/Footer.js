@@ -2,7 +2,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { Facebook, Heart } from 'lucide-react';
 
 export function Footer() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -15,6 +15,7 @@ export function Footer() {
     { id: 'about', label: t.nav.about },
     { id: 'services', label: t.nav.services },
     { id: 'gallery', label: t.nav.gallery },
+    { id: 'reviews', label: language === 'fr' ? 'Avis' : 'Reviews' },
     { id: 'booking', label: t.nav.booking },
     { id: 'contact', label: t.nav.contact },
   ];
