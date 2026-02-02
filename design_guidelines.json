@@ -1,0 +1,164 @@
+{
+  "design_system": {
+    "typography": {
+      "font_family": {
+        "heading": "Montserrat, sans-serif",
+        "body": "Open Sans, sans-serif"
+      },
+      "scale": {
+        "h1": "text-4xl md:text-6xl font-bold tracking-tight",
+        "h2": "text-3xl md:text-4xl font-bold tracking-tight",
+        "h3": "text-2xl font-semibold",
+        "body": "text-base md:text-lg leading-relaxed",
+        "small": "text-sm font-medium tracking-wide uppercase"
+      }
+    },
+    "colors": {
+      "palette": {
+        "primary": {
+          "DEFAULT": "#8D6E63",
+          "foreground": "#FFFFFF",
+          "hover": "#795548"
+        },
+        "secondary": {
+          "DEFAULT": "#FFCCBC",
+          "foreground": "#3E2723",
+          "hover": "#FFAB91"
+        },
+        "background": {
+          "DEFAULT": "#FDFBF7",
+          "alt": "#F5F5F5"
+        },
+        "text": {
+          "primary": "#3E2723",
+          "secondary": "#5D4037",
+          "muted": "#8D6E63"
+        },
+        "accent": {
+          "DEFAULT": "#D7CCC8",
+          "foreground": "#3E2723"
+        }
+      },
+      "gradients": {
+        "hero": "linear-gradient(to right, #FDFBF7, #FFCCBC)",
+        "card": "linear-gradient(135deg, #FFFFFF 0%, #FDFBF7 100%)"
+      }
+    },
+    "spacing": {
+      "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+      "section_padding": "py-16 md:py-24",
+      "element_gap": "gap-8"
+    },
+    "visual_enhancers": {
+      "radius": "rounded-2xl",
+      "shadows": {
+        "card": "shadow-[0_8px_30px_rgb(0,0,0,0.04)]",
+        "hover": "shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
+      },
+      "borders": "border border-[#8D6E63]/10"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#8D6E63] text-white hover:bg-[#795548] rounded-full px-8 py-3 font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5",
+      "secondary": "bg-[#FFCCBC] text-[#3E2723] hover:bg-[#FFAB91] rounded-full px-8 py-3 font-semibold transition-all duration-300",
+      "outline": "border-2 border-[#8D6E63] text-[#8D6E63] hover:bg-[#8D6E63] hover:text-white rounded-full px-8 py-3 font-semibold transition-all duration-300"
+    },
+    "cards": {
+      "service": "bg-white rounded-2xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 border border-[#8D6E63]/10 hover:border-[#8D6E63]/30 group",
+      "testimonial": "bg-[#FDFBF7] rounded-2xl p-8 border border-[#8D6E63]/10 relative"
+    },
+    "inputs": {
+      "default": "w-full rounded-lg border-[#8D6E63]/20 bg-white px-4 py-3 text-[#3E2723] focus:border-[#8D6E63] focus:ring-2 focus:ring-[#8D6E63]/20 transition-all outline-none"
+    }
+  },
+  "layout_strategies": {
+    "hero": "Split layout: Left content (Headline, Subhead, CTA), Right image (Hero Image). On mobile, stack with image on top or as background with overlay.",
+    "services": "Grid layout (1 col mobile, 2 col tablet, 4 col desktop). Cards with icon/image on top, title, description, price.",
+    "gallery": "Masonry or Bento grid. Mix of landscape and portrait images. Lightbox on click.",
+    "booking": "Two-column layout on desktop: Left side contact info/map, Right side booking form card.",
+    "footer": "Simple, centered or 3-column. Darker background (#3E2723) with light text (#FFCCBC)."
+  },
+  "assets": {
+    "images": {
+      "hero": {
+        "url": "https://images.unsplash.com/photo-1611173622933-91942d394b04",
+        "alt": "Happy Pomeranian in a pink towel",
+        "position": "Hero Section Right/Background"
+      },
+      "services": {
+        "bath": {
+          "url": "https://images.unsplash.com/photo-1597603413826-cd1c06b05222",
+          "alt": "Dog getting a bath"
+        },
+        "haircut": {
+          "url": "https://images.unsplash.com/photo-1662124778157-235dd9f10a44",
+          "alt": "Dog getting a haircut with scissors"
+        },
+        "nails": {
+          "url": "https://images.unsplash.com/photo-1601428317080-25b86da29a02",
+          "alt": "Dog paw care"
+        },
+        "full_grooming": {
+          "url": "https://images.unsplash.com/photo-1597595735781-6a57fb8e3e3d",
+          "alt": "Professionally groomed dog"
+        }
+      },
+      "gallery": [
+        "https://images.unsplash.com/photo-1611173622933-91942d394b04",
+        "https://images.unsplash.com/photo-1597603413826-cd1c06b05222",
+        "https://images.unsplash.com/photo-1662124778157-235dd9f10a44",
+        "https://images.unsplash.com/photo-1601428317080-25b86da29a02",
+        "https://images.unsplash.com/photo-1597595735781-6a57fb8e3e3d"
+      ]
+    },
+    "icons": "Use Lucide React icons (Scissors, Droplets, Calendar, MapPin, Phone, Mail, Facebook, Globe, Check)"
+  },
+  "content": {
+    "languages": ["fr", "en"],
+    "default_language": "fr",
+    "sections": {
+      "hero": {
+        "fr": {
+          "headline": "Toilettage Professionnel avec Amour",
+          "subhead": "Offrez à votre compagnon le soin qu'il mérite chez Poil et Moustache +",
+          "cta": "Réserver Maintenant"
+        },
+        "en": {
+          "headline": "Professional Grooming with Love",
+          "subhead": "Give your companion the care they deserve at Poil et Moustache +",
+          "cta": "Book Now"
+        }
+      },
+      "about": {
+        "fr": {
+          "title": "À Propos de Nous",
+          "content": "Bienvenue chez Poil et Moustache +, votre salon de toilettage de confiance à Gatineau. Valérie Trépanier et son équipe sont dédiées au bien-être de votre animal."
+        },
+        "en": {
+          "title": "About Us",
+          "content": "Welcome to Poil et Moustache +, your trusted grooming salon in Gatineau. Valérie Trépanier and her team are dedicated to your pet's well-being."
+        }
+      }
+    }
+  },
+  "instructions_to_main_agent": [
+    "Implement a 'LanguageContext' to manage global language state (FR/EN).",
+    "Use the specified color palette strictly. Avoid default Tailwind grays.",
+    "Ensure the Booking Form captures: Name, Phone, Email, Pet Type, Service, Date/Time, Notes.",
+    "The Booking Form should NOT require a backend. Log submission to console and show a success toast.",
+    "Use 'sonner' for all notifications (booking success, errors).",
+    "Implement smooth scrolling for navigation links.",
+    "Ensure the Gallery has a lightbox feature (click to expand).",
+    "The 'Social' section should only link to Facebook as requested.",
+    "Use the 'Montserrat' font for all headings and 'Open Sans' for body text. Import them via Google Fonts in index.css.",
+    "Add 'data-testid' to all interactive elements (buttons, inputs, toggles)."
+  ],
+  "universal_guidelines": [
+    "Do not use generic centered layouts. Use asymmetry where possible.",
+    "Use 2-3x more spacing than typical designs.",
+    "Add micro-interactions to all buttons and cards (hover lift, shadow increase).",
+    "Ensure high contrast for accessibility.",
+    "Mobile-first responsive design is mandatory."
+  ]
+}
