@@ -31,8 +31,11 @@ Create a single-page bilingual website for a pet grooming business in Gatineau c
 - [x] About section
 - [x] Services section with 4 service cards
 - [x] Gallery with lightbox modal
+- [x] **Reviews section with customer testimonials** (NEW)
+- [x] **Add review form with 5-star rating** (NEW)
 - [x] Booking form with all fields (name, phone, email, pet name, pet type, service, date, time, notes)
 - [x] Backend API for bookings (/api/bookings)
+- [x] **Backend API for reviews (/api/reviews)** (NEW)
 - [x] Contact section with 4 info cards
 - [x] CTA section
 - [x] Footer with Facebook link
