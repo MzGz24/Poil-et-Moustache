@@ -53,10 +53,10 @@ Create a single-page bilingual website for a pet grooming business in Gatineau c
 - Google Maps embed with actual location
 
 ### P2 (Medium) - Future
-- Customer reviews/testimonials section
-- Before/after gallery
+- Before/after gallery photos
 - Pricing information
 - Newsletter signup
+- Review moderation admin panel
 
 ## User Choices
 - Booking: Integrated form (not external link)
