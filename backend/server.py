@@ -178,6 +178,35 @@ async def update_booking_status(booking_id: str, status: str):
     return {"message": "Status updated successfully", "status": status}
 
 
+# Review Routes
+@api_router.post("/reviews", response_model=Review)
+async def create_review(review_data: ReviewCreate):
+    """Create a new review"""
+    try:
+        review = Review(**review_data.model_dump())
+        doc = review.model_dump()
+        doc['created_at'] = doc['created_at'].isoformat()
+        
+        await db.reviews.insert_one(doc)
+        
+        logger.info(f"New review created by {review.name}")
+        return review
+    except Exception as e:
+        logger.error(f"Error creating review: {str(e)}")
+        raise HTTPException(status_code=500, detail="Failed to create review")
+
+@api_router.get("/reviews", response_model=List[Review])
+async def get_reviews():
+    """Get all approved reviews"""
+    reviews = await db.reviews.find({"approved": True}, {"_id": 0}).sort("created_at", -1).to_list(100)
+    
+    for review in reviews:
+        if isinstance(review.get('created_at'), str):
+            review['created_at'] = datetime.fromisoformat(review['created_at'])
+    
+    return reviews
+
+
 # Include the router in the main app
 app.include_router(api_router)
 
