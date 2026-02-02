@@ -51,6 +51,29 @@ class BookingCreate(BaseModel):
     notes: Optional[str] = ""
     language: Optional[str] = "fr"
 
+
+# Review Models
+class ReviewCreate(BaseModel):
+    name: str
+    pet_name: str
+    pet_type: str = "dog"
+    rating: int = 5
+    comment_fr: Optional[str] = ""
+    comment_en: Optional[str] = ""
+
+class Review(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+    
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    name: str
+    pet_name: str
+    pet_type: str = "dog"
+    rating: int = 5
+    comment_fr: str = ""
+    comment_en: str = ""
+    approved: bool = True
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
 class Booking(BaseModel):
     model_config = ConfigDict(extra="ignore")
     
