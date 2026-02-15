@@ -16,7 +16,6 @@ export function Footer() {
     { id: 'services', label: t.nav.services },
     { id: 'gallery', label: t.nav.gallery },
     { id: 'reviews', label: language === 'fr' ? 'Avis' : 'Reviews' },
-    { id: 'booking', label: t.nav.booking },
     { id: 'contact', label: t.nav.contact },
   ];
 
