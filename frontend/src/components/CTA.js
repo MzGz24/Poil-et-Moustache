@@ -1,15 +1,8 @@
 import { useLanguage } from '../context/LanguageContext';
-import { Calendar } from 'lucide-react';
+import { Phone } from 'lucide-react';
 
 export function CTA() {
   const { t } = useLanguage();
-
-  const scrollToBooking = () => {
-    const element = document.getElementById('booking');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section className="py-20 md:py-28 bg-[#3E2723] relative overflow-hidden">
@@ -30,14 +23,14 @@ export function CTA() {
         >
           {t.cta.subheadline}
         </p>
-        <button
-          onClick={scrollToBooking}
+        <a
+          href="tel:8194391999"
           className="inline-flex items-center gap-3 bg-[#F8BBD9] text-[#3E2723] hover:bg-[#E91E63] hover:text-white rounded-full px-10 py-4 font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           data-testid="cta-button"
         >
-          <Calendar className="w-5 h-5" />
+          <Phone className="w-5 h-5" />
           {t.cta.button}
-        </button>
+        </a>
       </div>
     </section>
   );
