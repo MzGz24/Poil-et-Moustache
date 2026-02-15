@@ -276,7 +276,7 @@ export function Reviews() {
               data-testid={`review-card-${index}`}
             >
               {/* Quote Icon */}
-              <Quote className="w-8 h-8 text-[#FFCCBC] mb-4" />
+              <Quote className="w-8 h-8 text-[#F8BBD9] mb-4" />
               
               {/* Comment */}
               <p className="text-[#5D4037] leading-relaxed mb-4">
