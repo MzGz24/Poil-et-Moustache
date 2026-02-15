@@ -5,7 +5,6 @@ import { About } from './components/About';
 import { Services } from './components/Services';
 import { Gallery } from './components/Gallery';
 import { Reviews } from './components/Reviews';
-import { BookingForm } from './components/BookingForm';
 import { Contact } from './components/Contact';
 import { CTA } from './components/CTA';
 import { Footer } from './components/Footer';
