@@ -1,15 +1,8 @@
 import { useLanguage } from '../context/LanguageContext';
-import { Calendar } from 'lucide-react';
+import { Calendar, Phone } from 'lucide-react';
 
 export function Hero() {
   const { t } = useLanguage();
-
-  const scrollToBooking = () => {
-    const element = document.getElementById('booking');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-20">
@@ -40,14 +33,14 @@ export function Hero() {
             {t.hero.subheadline}
           </p>
 
-          <button
-            onClick={scrollToBooking}
+          <a
+            href="tel:8194391999"
             className="inline-flex items-center gap-3 bg-[#E91E63] text-white hover:bg-[#C2185B] rounded-full px-8 py-4 font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 animate-fade-in-up animation-delay-200"
             data-testid="hero-cta-button"
           >
-            <Calendar className="w-5 h-5" />
+            <Phone className="w-5 h-5" />
             {t.hero.cta}
-          </button>
+          </a>
         </div>
       </div>
 
