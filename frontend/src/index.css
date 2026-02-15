@@ -8,17 +8,19 @@
   --color-primary: #8D6E63;
   --color-primary-hover: #795548;
   --color-primary-foreground: #FFFFFF;
-  --color-secondary: #FFCCBC;
-  --color-secondary-hover: #FFAB91;
+  --color-secondary: #F8BBD9;
+  --color-secondary-hover: #F48FB1;
   --color-secondary-foreground: #3E2723;
   --color-background: #FDFBF7;
-  --color-background-alt: #F5F5F5;
+  --color-background-alt: #FFF5F8;
   --color-text-primary: #3E2723;
   --color-text-secondary: #5D4037;
   --color-text-muted: #8D6E63;
-  --color-accent: #D7CCC8;
+  --color-accent: #F8BBD9;
   --color-accent-foreground: #3E2723;
   --color-dark: #3E2723;
+  --color-pink: #E91E63;
+  --color-pink-light: #F8BBD9;
 }
 
 body {
