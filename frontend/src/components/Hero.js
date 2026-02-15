@@ -42,7 +42,7 @@ export function Hero() {
 
           <button
             onClick={scrollToBooking}
-            className="inline-flex items-center gap-3 bg-[#8D6E63] text-white hover:bg-[#795548] rounded-full px-8 py-4 font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 animate-fade-in-up animation-delay-200"
+            className="inline-flex items-center gap-3 bg-[#E91E63] text-white hover:bg-[#C2185B] rounded-full px-8 py-4 font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 animate-fade-in-up animation-delay-200"
             data-testid="hero-cta-button"
           >
             <Calendar className="w-5 h-5" />
