@@ -250,7 +250,7 @@ export function Reviews() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full flex items-center justify-center gap-2 bg-[#8D6E63] text-white hover:bg-[#795548] rounded-full px-6 py-3 font-semibold transition-all duration-300 disabled:opacity-50"
+                  className="w-full flex items-center justify-center gap-2 bg-[#E91E63] text-white hover:bg-[#C2185B] rounded-full px-6 py-3 font-semibold transition-all duration-300 disabled:opacity-50"
                   data-testid="review-submit-button"
                 >
                   {isSubmitting ? (
