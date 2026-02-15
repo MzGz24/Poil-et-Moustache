@@ -56,7 +56,7 @@ export function Header() {
           <div className="flex items-center gap-4">
             <button
               onClick={toggleLanguage}
-              className="flex items-center gap-2 px-4 py-2 rounded-full border-2 border-[#8D6E63] text-[#8D6E63] hover:bg-[#8D6E63] hover:text-white transition-all duration-300 font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-full border-2 border-[#E91E63] text-[#E91E63] hover:bg-[#E91E63] hover:text-white transition-all duration-300 font-semibold"
               data-testid="language-toggle"
             >
               <Globe className="w-4 h-4" />
