@@ -76,7 +76,7 @@ function ServiceCard({ service, Icon, image, index }) {
       </div>
 
       {/* Icon */}
-      <div className="w-12 h-12 rounded-full bg-[#FFCCBC] flex items-center justify-center mb-4 group-hover:bg-[#8D6E63] transition-colors duration-300">
+      <div className="w-12 h-12 rounded-full bg-[#F8BBD9] flex items-center justify-center mb-4 group-hover:bg-[#E91E63] transition-colors duration-300">
         <Icon className="w-6 h-6 text-[#3E2723] group-hover:text-white transition-colors duration-300" />
       </div>
 
