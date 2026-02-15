@@ -161,7 +161,7 @@ export function Reviews() {
           <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
             <DialogTrigger asChild>
               <button
-                className="inline-flex items-center gap-2 bg-[#FFCCBC] text-[#3E2723] hover:bg-[#FFAB91] rounded-full px-6 py-3 font-semibold transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-[#F8BBD9] text-[#3E2723] hover:bg-[#E91E63] hover:text-white rounded-full px-6 py-3 font-semibold transition-all duration-300"
                 data-testid="add-review-button"
               >
                 <Star className="w-5 h-5" />
