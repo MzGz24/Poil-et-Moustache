@@ -64,7 +64,7 @@ export function Contact() {
                 } transition-all duration-300`}
                 data-testid={`contact-info-${index}`}
               >
-                <div className="w-14 h-14 rounded-full bg-[#FFCCBC] flex items-center justify-center mx-auto mb-4">
+                <div className="w-14 h-14 rounded-full bg-[#F8BBD9] flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-6 h-6 text-[#3E2723]" />
                 </div>
                 <h3 className="text-sm font-medium text-[#8D6E63] uppercase tracking-wide mb-2">
