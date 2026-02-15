@@ -30,7 +30,6 @@ function App() {
           <Services />
           <Gallery />
           <Reviews />
-          <BookingForm />
           <CTA />
           <Contact />
         </main>
