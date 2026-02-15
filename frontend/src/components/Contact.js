@@ -1,33 +1,62 @@
 import { useLanguage } from '../context/LanguageContext';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Users } from 'lucide-react';
 
 export function Contact() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  const texts = {
+    fr: {
+      title: 'Contactez-nous',
+      getInTouch: 'Entrer en contact',
+      address: 'Adresse',
+      addressValue: '842 boul. Maloney Est, local 4, Gatineau, QC, Canada',
+      phone: 'Téléphone',
+      email: 'Courriel',
+      availability: 'Disponibilités',
+      availabilityValue: 'Appelez-nous pour connaître nos disponibilités de la semaine',
+      teamNote: 'Notre équipe',
+      teamNoteValue: 'Nous sommes 3 toiletteuses autonomes avec des horaires différents. Appelez pour la semaine en cours!'
+    },
+    en: {
+      title: 'Contact Us',
+      getInTouch: 'Get in touch',
+      address: 'Address',
+      addressValue: '842 Maloney Blvd East, Suite 4, Gatineau, QC, Canada',
+      phone: 'Phone',
+      email: 'Email',
+      availability: 'Availability',
+      availabilityValue: 'Call us to check our weekly availability',
+      teamNote: 'Our Team',
+      teamNoteValue: 'We are 3 independent groomers with different schedules. Call for current week availability!'
+    }
+  };
+
+  const txt = texts[language];
 
   const contactInfo = [
     {
       icon: MapPin,
-      label: t.contact.address,
-      value: t.contact.addressValue,
+      label: txt.address,
+      value: txt.addressValue,
       href: 'https://maps.google.com/?q=842+boul.+Maloney+Est,+local+4,+Gatineau,+QC,+Canada'
     },
     {
       icon: Phone,
-      label: t.contact.phone,
+      label: txt.phone,
       value: '819 439-1999',
       href: 'tel:8194391999'
     },
     {
       icon: Mail,
-      label: t.contact.email,
+      label: txt.email,
       value: 'poiletmoustachep@gmail.com',
       href: 'mailto:poiletmoustachep@gmail.com'
     },
     {
       icon: Clock,
-      label: t.contact.hours,
-      value: t.contact.hoursValue,
-      href: null
+      label: txt.availability,
+      value: txt.availabilityValue,
+      href: 'tel:8194391999'
     }
   ];
 
@@ -37,14 +66,23 @@ export function Contact() {
         {/* Header */}
         <div className="text-center mb-16">
           <span className="text-sm font-medium tracking-wide uppercase text-[#8D6E63] mb-4 block">
-            {t.nav.about === 'About' ? 'Get in touch' : 'Entrer en contact'}
+            {txt.getInTouch}
           </span>
           <h2 
             className="text-3xl md:text-4xl font-bold text-[#3E2723] font-['Montserrat']"
             data-testid="contact-title"
           >
-            {t.contact.title}
+            {txt.title}
           </h2>
+        </div>
+
+        {/* Team Note Banner */}
+        <div className="bg-[#F8BBD9]/30 border border-[#E91E63]/20 rounded-2xl p-6 mb-12 text-center">
+          <div className="flex items-center justify-center gap-3 mb-2">
+            <Users className="w-6 h-6 text-[#E91E63]" />
+            <h3 className="text-lg font-semibold text-[#3E2723]">{txt.teamNote}</h3>
+          </div>
+          <p className="text-[#5D4037]">{txt.teamNoteValue}</p>
         </div>
 
         {/* Contact Cards */}
@@ -60,7 +98,7 @@ export function Contact() {
                 target={item.href?.startsWith('http') ? '_blank' : undefined}
                 rel={item.href?.startsWith('http') ? 'noopener noreferrer' : undefined}
                 className={`bg-white rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-[#8D6E63]/10 text-center ${
-                  item.href ? 'hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:border-[#8D6E63]/30 cursor-pointer' : ''
+                  item.href ? 'hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:border-[#E91E63]/30 cursor-pointer' : ''
                 } transition-all duration-300`}
                 data-testid={`contact-info-${index}`}
               >
